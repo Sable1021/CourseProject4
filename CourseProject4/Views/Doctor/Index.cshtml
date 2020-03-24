@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CourseProject4.Models.Doctor>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Doctors</h1>
+
+<p>
+
+    <a asp-action="Create">Create New</a>
+
+</p>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var doc in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => doc.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => doc.Position)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => doc.Room)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => doc.Age)
+                </td>
+
+                <td>
+                    <a asp-action="Edit" asp-route-id="@doc.DoctorID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@doc.DoctorID">Patients</a>
+                    <a asp-action="Delete" asp-route-id="@doc.DoctorID">Delete</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>

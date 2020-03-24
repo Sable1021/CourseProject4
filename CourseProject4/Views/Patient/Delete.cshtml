@@ -1,0 +1,68 @@
+﻿@model CourseProject4.Models.Patient
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<div>
+    <h4>Patient Information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Name)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Gender)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Age)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Insurance)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Insurance)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Diagnosis)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Diagnosis)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.Doctor)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdmitDate)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.AdmitDate)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.DischargeDate)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.DischargeDate)
+        </dt>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PatientID" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Back to List</a>
+
+    </form>
+</div>
+

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<CourseProject4.Models.Doctor>
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientName)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientAge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Insurance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdmitDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DischargeDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diagnosis)
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var doc in Model)
+        {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => doc.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => doc.PatientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => doc.PatientAge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => doc.Insurance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => doc.AdmitDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => doc.DischargeDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => doc.Diagnosis)
+            </td>
+
+
+        </tr>
+        }
+    </tbody>
+
+</table>
+
+<a asp-action="Index">Back to Doctors</a>
